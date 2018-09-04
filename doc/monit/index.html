@@ -1,0 +1,372 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Monit · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../openscap/" />
+    
+    
+    <link rel="prev" href="../audit/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Title
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../audit/">
+            
+                <a href="../audit/">
+            
+                    
+                    Audit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Monit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../openscap/">
+            
+                <a href="../openscap/">
+            
+                    
+                    OpenSCPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../tlog/">
+            
+                <a href="../tlog/">
+            
+                    
+                    Tlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Monit</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="monit">Monit</h1>
+<p>&#x30B5;&#x30FC;&#x30D0;&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x578B;&#x3067;&#x52D5;&#x304F;&#x6B7B;&#x6D3B;&#x76E3;&#x8996;&#x30B5;&#x30FC;&#x30D3;&#x30B9;<br>&#x4E3B;&#x306A;&#x6A5F;&#x80FD;&#x3068;&#x3057;&#x3066;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x4E8B;&#x304C;&#x3067;&#x304D;&#x308B;  </p>
+<ul>
+<li>&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x76E3;&#x8996;  </li>
+<li>&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x76E3;&#x8996;  </li>
+<li>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x76E3;&#x8996;  </li>
+<li>&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x76E3;&#x8996;  </li>
+<li>&#x30E1;&#x30FC;&#x30EB;&#x901A;&#x77E5;  </li>
+<li>&#x30A2;&#x30E9;&#x30FC;&#x30C8;&#x3068;&#x9023;&#x52D5;&#x3057;&#x305F;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x5B9F;&#x884C;  </li>
+</ul>
+<p>[&#x30DE;&#x30CB;&#x30E5;&#x30A2;&#x30EB;]<br><a href="https://mmonit.com/monit/documentation/monit.html" target="_blank">https://mmonit.com/monit/documentation/monit.html</a>  </p>
+<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
+<p>EPEL&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x304B;&#x3089;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;  </p>
+<pre><code># yum install --enablerepo=epel monit
+# systemctl start monit
+</code></pre><p>&#x57FA;&#x672C;&#x8A2D;&#x5B9A;  </p>
+<pre><code># vim /etc/monitrc
+
+## &#x76E3;&#x8996;&#x9593;&#x9694;(s)
+set daemon  60 
+
+## SMTP&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x6307;&#x5B9A;
+set mailserver localhost
+
+## &#x30E1;&#x30FC;&#x30EB;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30C3;&#x30C8;
+set mail-format {
+  from: monit@localhost.localdomain
+  subject: &#x30A2;&#x30E9;&#x30FC;&#x30C8;&#x691C;&#x77E5; $EVENT $SERVICE
+  message: &#x95A2;&#x4FC2;&#x8005;&#x5404;&#x4F4D;
+
+    &#x76E3;&#x8996;: $SERVICE $EVENT
+    &#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;: $ACTION
+    &#x76E3;&#x8996;&#x30B5;&#x30FC;&#x30D0;: $HOST
+    &#x76E3;&#x8996;&#x6642;&#x523B;: $DATE
+
+    &#x5185;&#x5BB9;:
+    $DESCRIPTION
+}
+
+## &#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30A2;&#x30E9;&#x30FC;&#x30C8;&#x901A;&#x77E5;&#x5148;
+## &#x3053;&#x3053;&#x306B;&#x5B9A;&#x7FA9;&#x3057;&#x305F;&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x306B;&#x306F;&#x5168;&#x3066;&#x306E;&#x30A2;&#x30E9;&#x30FC;&#x30C8;&#x3068;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x901A;&#x77E5;&#x304C;&#x98DB;&#x3076;
+## &#x500B;&#x5225;&#x306B;&#x5B9A;&#x7FA9;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;&#x3070;&#x76E3;&#x8996;&#x8A2D;&#x5B9A;&#x6BCE;&#x306B;&#x5B9A;&#x7FA9;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;
+set alert shm_ope_ml@ml01.trans-cosmos.co.jp but not on { action }
+</code></pre><h2 id="&#x30ED;&#x30B0;&#x8A2D;&#x5B9A;">&#x30ED;&#x30B0;&#x8A2D;&#x5B9A;</h2>
+<p>monit&#x306E;&#x30ED;&#x30B0;&#x306F;<code>/var/log/monit.log</code>&#x306B;&#x51FA;&#x529B;&#x3055;&#x308C;&#x308B;&#x304C;&#x3001;<br>&#x7279;&#x5B9A;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3067;&#x306F;syslog&#x306B;&#x3082;&#x51FA;&#x529B;&#x3055;&#x308C;&#x3066;&#x3057;&#x307E;&#x3044;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x76E3;&#x8996;&#x3067;&#x7121;&#x9650;&#x691C;&#x77E5;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3042;&#x308B;<br>monit&#x95A2;&#x9023;&#x306E;&#x30ED;&#x30B0;&#x306F;syslog&#x306B;&#x51FA;&#x529B;&#x3057;&#x306A;&#x3044;&#x3088;&#x3046;rsyslog&#x306B;&#x5B9A;&#x7FA9;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304A;&#x304F;  </p>
+<pre><code>:programname, isequal, &quot;monit&quot; ~
+&amp; stop
+</code></pre><h2 id="&#x76E3;&#x8996;&#x8A2D;&#x5B9A;">&#x76E3;&#x8996;&#x8A2D;&#x5B9A;</h2>
+<p>&#x30B3;&#x30F3;&#x30D5;&#x30A3;&#x30B0;<code>monitrc</code>&#x306B;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x305F;<code>include /etc/monit.d/*</code>&#x306B;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x305F;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x306B;&#x76E3;&#x8996;&#x9805;&#x76EE;&#x5358;&#x4F4D;&#x3067;&#x5B9A;&#x7FA9;&#x3059;&#x308B;  </p>
+<p><strong>&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x76E3;&#x8996;</strong>  </p>
+<pre><code># vim /etc/monit.d/check_messages
+check file syslog with path /var/log/messages
+ ignore match &quot;/opt/conf/check_messages-exclude&quot;
+ if match &quot;/opt/conf/check_messages-include&quot;  then alert
+</code></pre><p>&#x691C;&#x77E5;&#x6587;&#x8A00;&#x4E00;&#x89A7;&#x3068;&#x9664;&#x5916;&#x6587;&#x8A00;&#x4E00;&#x89A7;&#x3092;&#x5916;&#x51FA;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3067;&#x7BA1;&#x7406;&#x3059;&#x308B;  </p>
+<pre><code># vim check_messages-include
+ERROR
+warn
+Warn
+WARN
+fatal
+Fatal
+FATAL
+infect
+Infect
+INFECT
+alert
+Alert
+ALERT
+panic
+Panic
+PANIC
+oom-killer
+
+# vim check_messages-exclude
+test
+</code></pre><p><strong>&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x76E3;&#x8996;</strong>  </p>
+<p>&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x76E3;&#x8996;&#x3067;&#x306F;&#x6307;&#x5B9A;&#x3055;&#x308C;&#x305F;PID&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x76E3;&#x8996;&#x3057;&#x3001;&#x7121;&#x3044;&#x5834;&#x5408;&#x8D77;&#x52D5;&#x3042;&#x308B;&#x3044;&#x306F;&#x505C;&#x6B62;&#x3092;&#x884C;&#x3046;<br>&#x5FA9;&#x65E7;&#x3057;&#x306A;&#x3044;&#x5834;&#x5408;&#x306E;&#x7121;&#x9650;&#x30EB;&#x30FC;&#x30D7;&#x306B;&#x306A;&#x3089;&#x306A;&#x3044;&#x3088;&#x3046;&#x3001;&#x30EA;&#x30C8;&#x30E9;&#x30A4;&#x56DE;&#x6570;&#x3092;3&#x56DE;&#x3068;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x308B;  </p>
+<pre><code># vim check_crond
+check process crond
+  with pidfile &quot;/var/run/crond.pid&quot;
+  start program = &quot;/bin/systemctl start crond&quot;
+  stop program = &quot;/bin/systemctl stop crond&quot;
+  if 3 restarts within 3 cycles then alert
+</code></pre><p><strong>&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x76E3;&#x8996;</strong>  </p>
+<p>&#x76E3;&#x8996;&#x9805;&#x76EE;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x95BE;&#x5024;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x8D85;&#x3048;&#x305F;&#x5834;&#x5408;&#x30A2;&#x30E9;&#x30FC;&#x30C8;<br>&#x767A;&#x751F;&#x3057;&#x7D9A;&#x3051;&#x308B;&#x9650;&#x308A;&#x30A2;&#x30E9;&#x30FC;&#x30C8;&#x901A;&#x77E5;&#x306F;&#x767A;&#x751F;&#x3057;&#x7D9A;&#x3051;&#x307E;&#x3059;  </p>
+<pre><code>check system $HOST
+    if loadavg (1min) &gt; 4 then alert
+    if loadavg (5min) &gt; 2 then alert
+    if cpu usage &gt; 95% for 10 cycles then alert
+    if memory usage &gt; 75% then alert
+    if swap usage &gt; 25% then alert
+</code></pre><p><strong>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5B58;&#x5728;&#x76E3;&#x8996;</strong>  </p>
+<p>&#x6307;&#x5B9A;&#x3055;&#x308C;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x51FA;&#x6765;&#x306A;&#x304F;&#x306A;&#x3063;&#x305F;&#x5834;&#x5408;&#x30A2;&#x30E9;&#x30FC;&#x30C8;  </p>
+<pre><code>check directory data02 
+  path /data02/stgimg.shamaison.com/public/sys/housing_imgs/.directory_monitor
+  if does not exist then alert
+</code></pre><p><strong>&#x901A;&#x77E5;&#x306E;&#x500B;&#x5225;&#x8A2D;&#x5B9A;</strong><br>&#x76E3;&#x8996;&#x5BFE;&#x8C61;&#x6BCE;&#x306B;&#x901A;&#x77E5;&#x5148;&#x3092;&#x5206;&#x3051;&#x305F;&#x3044;&#x5834;&#x5408;&#x76E3;&#x8996;&#x5B9A;&#x7FA9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x672B;&#x306B;&#x30E1;&#x30FC;&#x30EB;&#x5B9A;&#x7FA9;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;  </p>
+<pre><code>alert toto_system@ml01.trans-cosmos.co.jp
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../audit/" class="navigation navigation-prev " aria-label="Previous page: Audit">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../openscap/" class="navigation navigation-next " aria-label="Next page: OpenSCPA">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Monit","level":"1.3","depth":1,"next":{"title":"OpenSCPA","level":"1.4","depth":1,"path":"openscap/index.md","ref":"openscap/index.md","articles":[]},"previous":{"title":"Audit","level":"1.2","depth":1,"path":"audit/index.md","ref":"audit/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"monit/index.md","mtime":"2018-09-04T04:25:24.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-04T04:25:40.792Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

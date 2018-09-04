@@ -18,7 +18,6 @@ EPELリポジトリからインストールする
 
 ```
 # yum install --enablerepo=epel monit
-# systemctl start monit
 ```
 
 基本設定  
@@ -51,16 +50,6 @@ set mail-format {
 ## ここに定義したメールアドレスには全てのアラートとシステム通知が飛ぶ
 ## 個別に定義したい場合ば監視設定毎に定義する必要がある
 set alert shm_ope_ml@ml01.trans-cosmos.co.jp but not on { action }
-```
-
-## ログ設定
-monitのログは`/var/log/monit.log`に出力されるが、  
-特定のバージョンではsyslogにも出力されてしまいテキスト監視で無限検知することがある  
-monit関連のログはsyslogに出力しないようrsyslogに定義を追加しておく  
-
-```
-:programname, isequal, "monit" ~
-& stop
 ```
 
 ## 監視設定
