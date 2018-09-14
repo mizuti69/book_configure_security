@@ -50,7 +50,7 @@ set mail-format {
 ## システムアラート通知先
 ## ここに定義したメールアドレスには全てのアラートとシステム通知が飛ぶ
 ## 個別に定義したい場合ば監視設定毎に定義する必要がある
-set alert shm_ope_ml@ml01.trans-cosmos.co.jp but not on { action }
+set alert root@localhost.localdomain but not on { action }
 ```
 
 ## ログ設定
@@ -143,5 +143,5 @@ check directory data02
 監視対象毎に通知先を分けたい場合監視定義ファイルの末にメール定義を追加する  
 
 ```
-alert toto_system@ml01.trans-cosmos.co.jp
+alert root@localhost.localdomain
 ```
