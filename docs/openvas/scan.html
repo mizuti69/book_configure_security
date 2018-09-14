@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Audit · GitBook</title>
+        <title>OpenVASスキャンの実行 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -49,10 +49,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../etckeeper/" />
+    <link rel="next" href="../tlog/" />
     
     
-    <link rel="prev" href="../afick/" />
+    <link rel="prev" href="install.html" />
     
 
     </head>
@@ -107,9 +107,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../audit/">
             
-                <a href="./">
+                <a href="../audit/">
             
                     
                     Audit
@@ -159,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../openvas/">
+        <li class="chapter " data-level="1.7" data-path="./">
             
-                <a href="../openvas/">
+                <a href="./">
             
                     
                     OpenVAS
@@ -173,9 +173,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../openvas/install.html">
+        <li class="chapter " data-level="1.7.1" data-path="install.html">
             
-                <a href="../openvas/install.html">
+                <a href="install.html">
             
                     
                     OpneVASのインストール
@@ -186,9 +186,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../openvas/scan.html">
+        <li class="chapter active" data-level="1.7.2" data-path="scan.html">
             
-                <a href="../openvas/scan.html">
+                <a href="scan.html">
             
                     
                     OpenVASスキャンの実行
@@ -260,7 +260,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Audit</a>
+        <a href=".." >OpenVASスキャンの実行</a>
     </h1>
 </div>
 
@@ -275,84 +275,33 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="audit">Audit</h1>
-<p>OS&#x76E3;&#x67FB;&#x30ED;&#x30B0;&#x306E;&#x53D6;&#x5F97;  </p>
-<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
-<p>&#x591A;&#x304F;&#x306E;OS&#x306B;&#x3066;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x304C;&#x591A;&#x3044;<br>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x8D77;&#x52D5;&#x3059;&#x308C;&#x3070;&#x57FA;&#x672C;&#x52D5;&#x304F;  </p>
-<pre><code># yum install audit
-# systemctl start auditd
-</code></pre><h2 id="&#x57FA;&#x672C;&#x8A2D;&#x5B9A;">&#x57FA;&#x672C;&#x8A2D;&#x5B9A;</h2>
-<p>&#x76E3;&#x67FB;&#x30ED;&#x30B0;&#x306F;<code>/var/log/auditd</code>&#x914D;&#x4E0B;&#x306B;&#x51FA;&#x529B;&#x3055;&#x308C;&#x308B;<br>&#x30ED;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x4FDD;&#x6301;&#x671F;&#x9593;&#x3084;&#x30B5;&#x30A4;&#x30BA;&#x306F;&#x30B3;&#x30F3;&#x30D5;&#x30A3;&#x30B0;&#x3067;&#x8ABF;&#x6574;&#x53EF;&#x80FD;  </p>
-<pre><code># vim /etc/auditd/auditd.conf
-
-# &#xFF11;&#x4E16;&#x4EE3;&#x3042;&#x305F;&#x308A;&#x306E;&#x30ED;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30B5;&#x30A4;&#x30BA;&#xFF08;MB&#xFF09;
-max_log_file = 8
-
-# &#x30ED;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30B5;&#x30A4;&#x30BA;&#x6700;&#x5927;&#x6642;&#x306E;&#x6319;&#x52D5;
-max_log_file_action = ROTATE
-
-# &#x30ED;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x4FDD;&#x6301;&#x4E16;&#x4EE3;&#x6570;
-num_logs = 5
-</code></pre><h2 id="&#x30EC;&#x30DD;&#x30FC;&#x30C8;&#x51FA;&#x529B;">&#x30EC;&#x30DD;&#x30FC;&#x30C8;&#x51FA;&#x529B;</h2>
+                                <h1 id="openvas">OpenVAS</h1>
+<p>&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x3059;&#x308B;&#x3068;&#x30C0;&#x30C3;&#x30B7;&#x30E5;&#x30DC;&#x30FC;&#x30C9;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;<br><img src="images/openvas_002.png" width="80%">  </p>
+<h2 id="&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x306E;&#x5B9F;&#x65BD;">&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x306E;&#x5B9F;&#x65BD;</h2>
+<p>OpnVAS&#x30B5;&#x30FC;&#x30D0; --&gt; &#x5BFE;&#x8C61;&#x30B5;&#x30FC;&#x30D0;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x3092;&#x5B9F;&#x65BD;&#x3059;&#x308B;  </p>
+<h3 id="immediate-scan">Immediate Scan</h3>
+<p>&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x300C;Scans&#x300D;&#x304B;&#x3089;&#x300C;Tasks&#x300D;&#x3092;&#x9078;&#x629E;<br><img src="images/openvas_003.png" width="80%">  </p>
+<p>&#x5DE6;&#x4E0A;&#x306E;&#x30DE;&#x30FC;&#x30AF;&#x304B;&#x3089;&#x300C;Task Wizard&#x300D;&#x3067;&#x8FFD;&#x52A0;&#x3059;&#x308B;<br><img src="images/openvas_004.png" width="80%">  </p>
+<p><img src="images/openvas_005.png" width="80%">  </p>
+<p>&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x304C;&#x5B8C;&#x4E86;&#x3059;&#x308B;&#x3068;&#x30BF;&#x30B9;&#x30AF;&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#x3001;&#x30EC;&#x30DD;&#x30FC;&#x30C8;&#x72B6;&#x6CC1;&#x304C;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x308B;<br><img src="images/openvas_006.png" width="80%">  </p>
+<h3 id="advanced-scan">Advanced Scan</h3>
+<p>&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x300C;Configration&#x300D;&#x304B;&#x3089;&#x300C;Credentials&#x300D;&#x3092;&#x9078;&#x629E;<br><img src="images/openvas_007.png" width="80%">  </p>
+<p>SSH&#x306E;&#x63A5;&#x7D9A;&#x60C5;&#x5831;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;<br><img src="images/openvas_008.png" width="80%">  </p>
+<p>&#x300C;Scans&#x300D;-&gt;&#x300C;Tasks&#x300D;&#x306E;&#x5DE6;&#x4E0A;&#x306E;&#x30DE;&#x30FC;&#x30AF;&#x304B;&#x3089;&#x300C;Task Wizard&#x300D;-&gt;&#x300C;Advanced Task Wizard&#x300D;<br><img src="images/openvas_004.png" width="80%">  </p>
+<p>&#x5148;&#x7A0B;&#x4F5C;&#x6210;&#x3057;&#x305F;SSH&#x63A5;&#x7D9A;&#x60C5;&#x5831;&#x3092;&#x9078;&#x629E;&#x3057;&#x30BF;&#x30B9;&#x30AF;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x5B9F;&#x65BD;<br><img src="images/openvas_009.png" width="80%">  </p>
+<p>Advanced Scan&#x306F;30&#xFF5E;40&#x5206;&#x304B;&#x304B;&#x308B;&#x5834;&#x5408;&#x3082;&#x3042;&#x308B;  </p>
+<h2 id="&#x30C6;&#x30B9;&#x30C8;&#x5185;&#x5BB9;">&#x30C6;&#x30B9;&#x30C8;&#x5185;&#x5BB9;</h2>
+<p>&#x300C;Configuration&#x300D;-&gt;&#x300C;Scan Configs&#x300D;&#x304B;&#x3089;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308B;<br>&#x4F8B;&#x3048;&#x3070;QuickScan&#x3067;&#x5229;&#x7528;&#x3055;&#x308C;&#x308B;&#x300C;Full and fast&#x300D;&#x3067;&#x306F;&#x4E0B;&#x8A18;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;<br><img src="images/openvas_010.png" width="80%">  </p>
 <ul>
-<li>&#x5168;&#x3066;&#x306E;&#x30EC;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x8868;&#x793A;</li>
+<li>Network Vulnerability Test Families</li>
+<li>Scanner Preferences</li>
+<li>Network Vulnerability Test Preferences</li>
 </ul>
-<pre><code># aureport -x
-# aureport -x --summary
+<p>&#x30B9;&#x30AD;&#x30E3;&#x30CA;&#x30FC;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x9664;&#x304F;&#x3068;&#x5185;&#x5BB9;&#x306F;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x306B;&#x95A2;&#x3059;&#x308B;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x304C;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;<br>SSH&#x8A2D;&#x5B9A;&#x306F;&#x3042;&#x308B;&#x304C;&#x3001;OS&#x5185;&#x90E8;&#x306E;&#x72B6;&#x6CC1;&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x3057;&#x306A;&#x3044;  </p>
+<h2 id="&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x30EC;&#x30DD;&#x30FC;&#x30C8;&#x306E;&#x78BA;&#x8A8D;">&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x30EC;&#x30DD;&#x30FC;&#x30C8;&#x306E;&#x78BA;&#x8A8D;</h2>
+<p>&#x300C;Scans&#x300D;-&gt;&#x300C;Reports&#x300D;&#x304B;&#x3089;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308B;<br><img src="images/openvas_011.png" width="80%">  </p>
+<p>&#x9069;&#x5F53;&#x306B;&#x7ACB;&#x3066;&#x305F;&#x30B5;&#x30FC;&#x30D0;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x305F;&#x5834;&#x5408;&#xFF08;FW&#x3042;&#x308A;&#xFF09;SSH&#x306B;&#x5BFE;&#x3059;&#x308B;&#x8106;&#x5F31;&#x6027;&#x304C;&#x691C;&#x77E5;&#x3055;&#x308C;&#x305F;<br>SSH&#x3067;&#x5229;&#x7528;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x6697;&#x53F7;&#x5316;&#x5F37;&#x5EA6;&#x304C;&#x5F31;&#x3044;&#x3082;&#x306E;&#x3089;&#x3057;&#x3044;  </p>
 
-Executable Summary Report
-=================================
-total  file
-=================================
-117876  /usr/sbin/crond
-13662  /usr/lib/systemd/systemd
-1092  /usr/sbin/sshd
-136  /usr/bin/sudo
-136  /usr/bin/su
-16  /usr/sbin/useradd
-8  /usr/sbin/groupadd
-4  /usr/sbin/usermod
-2  /usr/lib/systemd/systemd-update-utmp
-2  /usr/bin/passwd
-1  /usr/bin/kmod
-</code></pre><ul>
-<li>OS&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x30EC;&#x30DD;&#x30FC;&#x30C8;&#x306E;&#x8868;&#x793A;</li>
-</ul>
-<pre><code># aureport --login -i
-
-Login Report
-============================================
-# date time auid host term exe success event
-============================================
-1. 2018&#x5E74;09&#x6708;04&#x65E5; 12:50:25 unset XX.XX.XX.XX /dev/pts/0 /usr/sbin/sshd yes 152612
-</code></pre><ul>
-<li>&#x8A8D;&#x8A3C;&#x30ED;&#x30B0;  </li>
-</ul>
-<pre><code># aureport -au
-
-Authentication Report
-============================================
-# date time acct host term exe success event
-============================================
-1. 2018&#x5E74;09&#x6708;04&#x65E5; 12:50:25 user_name XX.XX.XX.XX ssh /usr/sbin/sshd yes 152601
-2. 2018&#x5E74;09&#x6708;04&#x65E5; 12:50:25 user_name XX.XX.XX.XX ssh /usr/sbin/sshd yes 152604
-3. 2018&#x5E74;09&#x6708;04&#x65E5; 12:50:30 user_name ? /dev/pts/1 /usr/bin/sudo yes 152615
-4. 2018&#x5E74;09&#x6708;04&#x65E5; 12:50:30 root study-mng pts/1 /usr/bin/su yes 152620
-</code></pre><ul>
-<li>&#x65E5;&#x6642;&#x3001;&#x671F;&#x9593;&#x6307;&#x5B9A;</li>
-</ul>
-<p>&#x904E;&#x53BB;&#x4E00;&#x9031;&#x9593;&#x306E;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x60C5;&#x5831;&#x3092;&#x78BA;&#x8A8D;  </p>
-<pre><code># aureport --login -i -ts week-ago
-</code></pre><ul>
-<li>&#x65E5;&#x6642;&#x6307;&#x5B9A;</li>
-</ul>
-<pre><code># aureport --start 04/08/2013 00:00:00 --end 04/11/2013 00:00:00
-</code></pre><ul>
-<li>&#x30ED;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x6307;&#x5B9A;</li>
-</ul>
-<pre><code># /sbin/aureport -au -if /var/log/audit
-# /sbin/aureport -au -if /var/log/audit/audit.log
-</code></pre>
                                 
                                 </section>
                             
@@ -379,12 +328,12 @@ Authentication Report
 
             
                 
-                <a href="../afick/" class="navigation navigation-prev " aria-label="Previous page: AFICK">
+                <a href="install.html" class="navigation navigation-prev " aria-label="Previous page: OpneVASのインストール">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../etckeeper/" class="navigation navigation-next " aria-label="Next page: etckeeper">
+                <a href="../tlog/" class="navigation navigation-next " aria-label="Next page: Tlog">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -395,7 +344,7 @@ Authentication Report
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Audit","level":"1.3","depth":1,"next":{"title":"etckeeper","level":"1.4","depth":1,"path":"etckeeper/index.md","ref":"etckeeper/index.md","articles":[]},"previous":{"title":"AFICK","level":"1.2","depth":1,"path":"afick/index.md","ref":"afick/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"audit/index.md","mtime":"2018-09-04T04:25:11.151Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-14T11:49:25.485Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OpenVASスキャンの実行","level":"1.7.2","depth":2,"next":{"title":"Tlog","level":"1.8","depth":1,"path":"tlog/index.md","ref":"tlog/index.md","articles":[]},"previous":{"title":"OpneVASのインストール","level":"1.7.1","depth":2,"path":"openvas/install.md","ref":"openvas/install.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"openvas/scan.md","mtime":"2018-09-14T11:43:46.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-14T11:49:25.485Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
