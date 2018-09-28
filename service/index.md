@@ -12,6 +12,10 @@ https://mozilla.github.io/server-side-tls/ssl-config-generator/
 mozilaが提供しているWEBサイトのレスポンスヘッダーのセキュリティリスクを診断レポートしてくれる  
 https://observatory.mozilla.org/  
 
+### 送信メールの信頼度チェック
+テストメールを送ることで、MX、逆引き、SPFなど送信されたメールに対する信頼度をチェックしてくれる  
+http://www.mail-tester.com/  
+
 ### Gauge 脆弱性情報通知サービス  
 JVNの脆弱性情報から中度以上の脆弱性情報を日次でメールしてくれる  
 https://vns.vital-service.com/  
