@@ -24,7 +24,6 @@ yum install --enablerepo=epel clamav
 
 ```
 clamupdate:x:995:992:Clamav database update user:/var/lib/clamav:/sbin/nologin
-clamscan:x:994:990:Clamav scanner user:/:/sbin/nologin
 ```
 
 ## ウイルスデータベースの更新  
@@ -108,6 +107,12 @@ clamavを上記のように利用した場合、ウイルス定義DBを都度読
 
 ```
 # yum install --enablerepo=epel clamd
+```
+
+ユーザーが追加で作成される  
+
+```
+clamscan:x:994:990:Clamav scanner user:/:/sbin/nologin
 ```
 
 初期設定  
