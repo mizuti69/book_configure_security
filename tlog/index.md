@@ -35,9 +35,11 @@ https://github.com/Scribery/tlog/releases
 
 * profileに追記してログイン時に実行させる  
 
+ユーザー毎にログをわけて取りたいときに設定する。
+
 ```
 # Logging operation
-GRPS=(`/usr/bin/id -un`)
+GRPS=(`/usr/bin/id -Gn`)
 CHK_LOGIN="not a tty"
 CHK_TTY=`LANG=C /usr/bin/tty|sed -e "s/$CHK_LOGIN/1/g"`
 echo $CHK_TTY
@@ -48,10 +50,9 @@ if [ $CHK_TTY != 1 ]; then
         NUM=1
         ENTER_LIMIT=3
         echo ""
-        echo 'Please enter your name in *ALPHABET*.'
-        echo ""
-        echo -n "Who are you ? : "
+        echo -n "Please enter your name in *ALPHABET*. : "
         read REALNAME
+        echo ""
         while [ ! -n "$REALNAME" ]
         do
           if [ $NUM -eq $ENTER_LIMIT ]; then
@@ -72,4 +73,13 @@ if [ $CHK_TTY != 1 ]; then
     esac
   done
 fi
+```
+
+出力先ディレクトリには各ユーザーが出力できるよう書き込み権限のみ許可する
+
+```
+# mkdir /var/log/terminallog
+# chmod +t /var/log/terminallog
+# chmod o+w /var/log/terminallog
+# chmod o-r /var/log/terminallog
 ```
