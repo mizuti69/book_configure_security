@@ -10,7 +10,7 @@
   * [ClamAV](clamav/index.md)
   * [SophosAV](sophosav/index.md)
 * 診断  
-  * [OpenSCPA](openscap/index.md)  
+  * [OpenSCAP](openscap/index.md)  
   * [OpenVAS](openvas/index.md)  
     * [OpneVASのインストール](openvas/install.md)  
     * [OpenVASスキャンの実行](openvas/scan.md)
